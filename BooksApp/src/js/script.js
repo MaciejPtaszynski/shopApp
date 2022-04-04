@@ -67,7 +67,7 @@
         const booksList = document.querySelector(select.list.booksList);
         booksList.appendChild(generateDOM);
       }
-      console.log('render', thisBookList);   
+    
     }
     
     initAction(){
