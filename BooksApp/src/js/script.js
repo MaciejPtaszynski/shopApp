@@ -47,7 +47,7 @@
       thisBookList.dom = {};
 
       thisBookList.dom.booksList = document.querySelector(select.list.booksList);
-      thisBookList.dom.booksImg = document.querySelector(select.list.booksImage);
+      // thisBookList.dom.booksImg = document.querySelector(select.list.booksImage);
       thisBookList.dom.bookFilter = document.querySelector(select.products.filters);
     }
 
