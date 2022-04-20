@@ -1,7 +1,7 @@
 import styles from './Product.module.scss';
 import ProductImage from './ProductImage/ProductImage';
 import ProductForm from './ProductForm/ProductForm';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 const Product = ({title, basePrice, colors, name, sizes}) => {
@@ -12,17 +12,17 @@ const Product = ({title, basePrice, colors, name, sizes}) => {
     console.log('logo: ' + title) 
     console.log('size: ' + currentSize)
     console.log('color: ' + currentColor)
-    console.log('price: ' + getPrice())
+    console.log('price: ' + getPrice)
   }
 
   const [currentColor, setCurrentColor] = useState(colors[0]);
 
   const [currentSize, setCurrentSize] = useState(sizes[0].name);
 
-  const getPrice = () => {
+  const getPrice = useMemo(() => {
     const found = sizes.find(element => element.name === currentSize)
     return basePrice + found.additionalPrice;
-  };
+  },[currentSize, basePrice, sizes]);
 
   return (
     <article className={styles.product}>
