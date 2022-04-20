@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import shortid from 'shortid';  
 import PropTypes from 'prop-types';
 
-const OptionSize = ({sizes, setCurrentSize, currentSize}) => {
+const OptionSize = ({sizes, currentSize, setCurrentSize}) => {
     
     return (    
         <div className={styles.sizes}>

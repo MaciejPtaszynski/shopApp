@@ -1,5 +1,5 @@
 @use 'sass:math';
-@import './../../../styles/settings.scss';
+@import '../../../../../styles/settings.scss';
 
 .product {
   display: flex;
@@ -18,8 +18,8 @@
   padding: 0 ($base-size * 2);
   margin-left: -($base-size * 4);
   margin-top: -($base-size * 3);
-  min-width: 200px;
 }
+
 
 .image {
   width: 100%;
